@@ -3,6 +3,8 @@ package majinxin;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+
 public class LeeCode {
     /**难度: Easy
      * Given an array of integers, return indices of the two numbers such that they add up to a specific target.
@@ -18,6 +20,19 @@ public class LeeCode {
      */
     @Test
     public void test_leeCode_01() {
-        Log.println("leeCode");
+        int[] int_arrays = new int[]{2, 7, 11, 15};
+        for (int i = 2; i < 28; i++) {
+            int[] result = MethodSet.run_01(int_arrays, i);
+            if (result[1]!= 0) {
+                Log.println(Arrays.toString(result) + " = " + i);
+            }
+            int[] result2 = MethodSet.run_01_1(int_arrays, i);
+            if (result[1]!= 0) {
+                Log.println(Arrays.toString(result2) + " = " + i);
+            }
+
+        }
+
+
     }
 }
